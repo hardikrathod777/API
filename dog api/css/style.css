@@ -1,0 +1,59 @@
+/* CSS styles for breed list */
+body{
+  background-color: #f5f5f9;
+}
+.breedContainer {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 5px;
+  }
+  .breedItem {
+    list-style: none;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .subBreeds {
+    display: none;
+    padding-left: 20px;
+  }
+  .selected {
+    font-weight: bold;
+    color: #696CFF;
+    background-color: #e7e7ff;
+  }
+
+  .div-class{
+    width: 200px;
+    border: 1px solid #f1f2f4;
+    border-radius: 10px;
+    padding:0px 10px ;
+    background-color: #fff;
+  }
+  ul{
+    padding-inline-start: 0px;
+  }
+  .breedItem:hover{
+    background-color: #f5f5f9;
+  }
+  button{
+    width: 200px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: 1px solid #696CFF;
+    background-color: #e7e7ff;
+    color: #696CFF;
+  }
+
+  .img-box{
+    position: absolute;
+    left: 20%;
+    top: 0%;
+  }
+
+  #imageContainer img{
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+  }
