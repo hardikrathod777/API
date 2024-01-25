@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+
+    <title>Rest Countries API</title>
+</head>
+
+<body>
+    <header class="header">
+        <h2>Where in the World?</h2>
+        <div class="theme-box" onclick="toggleTheme()">
+            <ion-icon name="moon-outline"></ion-icon>
+            <p id="dark-mode-text">Dark Mode</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <form class="input-form" id="input-form">
+            
+            <input type="text" id="search" name="search" placeholder="Search for a country...">
+            <select name="regions" id="regions" placeholder="Filter by region" onchange="selectRegions()">
+                <option value="placeholder" disabled selected>Filter by Region</option>
+                <option value="africa">Africa</option>
+                <option value="america">America</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <option value="oceania">Oceania</option>
+            </select>
+        </form>
+
+        <section class="countries-box" id="countries-box">
+        
+        </section>
+    </main>
+
+    <section class="details-section">
+        <input type="button" value="Back" onclick="back()" class="back-btn">
+        <div class="details-grid">
+            <div class="details-flag">
+                <img src="https://flagcdn.com/de.svg">
+            </div>
+            <div class="text-grid">
+                <h3>Belgium</h3>
+                <!-- <div class="stats"> -->
+                    <p>Native Name: <span class="native-name">Belgie</span></p>
+                    <p>Population: <span class="population">Belgie</span></p>
+                    <p>Region: <span class="region">Belgie</span></p>
+                    <p>Sub Region: <span class="sub-region">Belgie</span></p>
+                    <p>Capital: <span class="capital">Belgie</span></p>
+                    <p>Top Level Domain: <span class="tld">Belgie</span></p>
+                    <p>Currencies: <span class="currencies">Belgie</span></p>
+                    <p>Languages: <span class="languages">Belgie</span></p>
+                
+                <div class="border-countries-box">
+                    Border Countries: 
+                </div>
+                <ul class="neighboring-countries" id="neighboring-countries">
+                
+                </ul>
+            </div>
+        </div>  
+    </section>
+
+
+    <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
