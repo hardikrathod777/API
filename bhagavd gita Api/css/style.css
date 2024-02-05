@@ -51,18 +51,68 @@ p {
     font-weight: 700;
     color: #F57903;
 }
+.chap-m-p{
+    font-size: 18px;
+    color: #F57903;
+    text-align: center;
+    margin-top: 20px;
+}
 .chap-n{
     font-size: 20px;
     font-weight: 700;
     color: #000;
+}
+.chap-m-n{
+    font-size: 30px;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    margin-top:36px;
+    margin-bottom: 36px !important;
 }
 .chap-t{
     color: #6b7280;
     font-size: 16px;
     margin-top: 10px;
 }
+.chap-m-t{
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    padding: 0px 250px;
+    margin-bottom: 40px !important;
+}
 
 .chap-box:hover{
     border: 2px solid #FFE9B1;
     background-color: #FFFAEC;
+}
+
+.modal-content{
+    width: 100vw !important;
+}
+.modal-dialog {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.chap-verses{
+    color: #000;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.verses_s{
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    margin: 15px 5px;
+    cursor: pointer;
+}
+.verses_s:hover{
+    color: #F57903;
+}
+.br-verses{
+    border-top: 2px solid #E5E7EB;
+    border-bottom: 2px solid #E5E7EB;
+    padding: 20px 10px;
 }
