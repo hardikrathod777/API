@@ -56,13 +56,12 @@ async function getAllChapterVerses(chapID, slID) {
     let promises = [];
 
     for (let i = 1; i <= slID; i++) {
-        let a =  await fetch(`https://bhagavadgitaapi.in/slok/${chapID}/${i}/`)
-            .then(response => response.json()).then(data => data)
-            promises.push(a);
+        let a = await fetch(`https://bhagavadgitaapi.in/slok/${chapID}/${i}/`)
+            .then(response => response.json());
+        promises.push(a);
     }
 
     displayAllVerses(promises);
-    
 }
 
 function displayAllVerses(verses) {
@@ -72,14 +71,19 @@ function displayAllVerses(verses) {
         const verseHTML = `<p class="verses_s">${verse.siva.et}</p>`;
         versesContainer.innerHTML += verseHTML;
     });
+
+    bindVerseClickEvent();
 }
-document.querySelectorAll('.verses_s').forEach(verseElement => {
-    verseElement.addEventListener('click', function() {
-        const chapID = this.getAttribute('data-chapter-id');
-        const verseId = this.getAttribute('data-verse-id');
-        displayVerseDetails(chapID, verseId);
+
+function bindVerseClickEvent() {
+    document.querySelectorAll('.verses_s').forEach(verseElement => {
+        verseElement.addEventListener('click', function() {
+            const chapID = this.getAttribute('data-chapter-id');
+            const verseId = this.getAttribute('data-verse-id');
+            displayVerseDetails(chapID, verseId);
+        });
     });
-});
+}
 
 function displayVerseDetails(chapID, verseId) {
     fetch(`https://bhagavadgitaapi.in/slok/${chapID}/${verseId}/`)
@@ -90,6 +94,7 @@ function displayVerseDetails(chapID, verseId) {
             return response.json();
         })
         .then(verseDetails => {
+            console.log(verseDetails);
             const offcanvasElement = document.getElementById('verseOffcanvas');
             const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
             offcanvas.show();
